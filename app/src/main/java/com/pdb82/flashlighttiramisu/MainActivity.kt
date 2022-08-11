@@ -60,23 +60,5 @@ class MainActivity : AppCompatActivity() {
             errorText.text = "Device not supported"
             seekBar.isEnabled = false
         }
-
-
-        val button_en = findViewById<Button>(R.id.button)
-        val button_ru = findViewById<Button>(R.id.button2)
-
-        val url_en = "https://t.me/google_nws"
-        val url_ru = "https://t.me/googlenws_ru"
-
-        val link_en = Intent(Intent.ACTION_VIEW, Uri.parse(url_en))
-        val link_ru = Intent(Intent.ACTION_VIEW, Uri.parse(url_ru))
-
-        button_en.setOnClickListener {
-            startActivity(link_en)
-        }
-
-        button_ru.setOnClickListener {
-            startActivity(link_ru)
-        }
     }
 }
