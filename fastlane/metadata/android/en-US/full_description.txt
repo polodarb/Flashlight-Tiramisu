@@ -1,0 +1,1 @@
+An application that allows you to smoothly adjust the brightness of the flashlight on some devices with Android 13 (A13 introduces the getTorchStrengthLevel and turnOnTorchWithStrengthLevel methods to the CameraManager class). 
