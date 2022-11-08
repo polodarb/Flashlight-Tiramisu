@@ -8,3 +8,7 @@ There is one caveat to this feature, however. Not every device running Android 1
 The reason support for this feature will be limited is that it will require an update to the camera hardware abstraction layer (HAL). A HAL is the software that defines the interface between the OS and the underlying hardware. In order for the OS to control the LED flash hardware, there needs to be a HAL that defines what commands the OS can issue to control the hardware. On Android, the camera provider HAL allows for direct control of the flash unit of camera devices, a feature that was introduced with version 2.4 of the HAL. The camera provider HAL enumerates and opens individual camera devices, while the camera device HAL is used to operate individual camera devices.
 
 Description taken from [this article](https://blog.esper.io/android-13-flashlight-brightness-control/)
+
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
+     alt="Get it on F-Droid"
+     height="80">](https://f-droid.org/packages/com.pdb82.flashlighttiramisu/)
