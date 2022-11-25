@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">Flashlight Tiramisu</string>
+    <string name="add_qs_title">Add QS Title</string>
+    <string name="settings">Settings</string>
+    <string name="add_flashlight_title_in_device_control">Add flashlight title in Device Control</string>
+
+    <string name="default_value_text" formatted="false">Saved value: %d%%</string>
+    <string name="save_as_default_value">Save slider value as default</string>
+
+    <string name="github">My GitHub profile</string>
+    <string name="label_main">Control</string>
+    <string name="slider_turns_on_the_flashlight">Slider turns on the flashlight</string>
+    <string name="auto_set_slider_from_default_value">Set slider to saved value</string>
+    <string name="settings_segment_values">Values on Segment Buttons</string>
+    <string name="option_1">1 Option - (1% | 25% | 50% | 100%)</string>
+    <string name="option_2">2 Option - (25% | 50% | 75% | 100%)</string>
+    <string name="label_experimental">Experimental</string>
+    <string name="add_title_in_device_control">Add title in Device Control</string>
+    <string name="explanation_of_setting_items">Explanation of setting items</string>
+
+    <string name="title">Explanation of setting items</string>
+    <string name="supporting_text">1. Slider turns on the flashlight - Auto turn on flashlight when slider value/position changes. \n2. Set slider to saved value - Set the slider position to the saved value after turning on the flashlight via button.\n3. Selecting segment button values between two options:\n    • 1 option is (1% | 25% | 50% | 100%)\n    • 2 option is (25% | 50% | 75% | 100%)</string>
+    <string name="accept">OK</string>
+    <string name="decline">Copy text</string>
+    <string name="copied_to_clipboard">Text copied to clipboard</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="device_not_support">Device not support</string>
+    <string name="exit_the_application">Exit the application</string>
 </resources>

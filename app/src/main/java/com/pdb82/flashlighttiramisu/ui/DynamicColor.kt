@@ -1,4 +1,4 @@
-package com.pdb82.flashlighttiramisu
+package com.pdb82.flashlighttiramisu.ui
 
 import android.app.Application
 import com.google.android.material.color.DynamicColors

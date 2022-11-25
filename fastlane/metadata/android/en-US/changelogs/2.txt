@@ -1,0 +1,12 @@
+Main screen:
+1. Added button to turn on or off the flashlight with animation and haptic effect.
+2. Changed the slider to control the brightness, now when you hold down you will see the position of the slider as a percentage.
+3. Added Segment buttons for more convenient setting of values.
+4. Added the ability to save the value of the slider and quickly use it either in the application or by clicking on a tile in the quick settings.
+5. Added a card with information about the saved value.
+6. 2 new buttons have been added to the TopBar: A button for quickly adding a tile to quick settings and a button for going to the settings screen.
+Settings screen:
+1. Added the ability to turn on or turn off the flashlight automatically when the slider position is changed.
+2. Added the ability to enable or disable such a function as: After turning on the flashlight - the position of the slider is automatically set to the saved value.
+3. Added the ability to select 2 variations of segment buttons.
+4. Added a button with explanations of all menu items.
