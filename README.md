@@ -10,6 +10,8 @@ In the settings menu, you can change how the flashlight works to your liking. Th
 - By clicking on a tile, it turns on the flashlight at the saved value.
 - Saved value displayed in tile subtitle.
 - Long press on a tile opens the app
+# Supported Device
+Flashlight brightness control only supports HAL version 3.8 and higher, so among the supported devices, the latest ones (For example, Pixel 6/7, Samsung S23, etc.)
 # Download
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
      alt="Get it on F-Droid"
