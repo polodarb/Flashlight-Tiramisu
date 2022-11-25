@@ -5,6 +5,8 @@ An application that allows you to smoothly adjust the brightness of the flashlig
 ### Main Screen
 In Main Screen, you have a large convenient button to turn the flashlight on and off, a slider and 4 small buttons to quickly set the value to the N position. You can also save the value of the slider and after each launch of the application, the slider will be set to the saved state. 
 ### Settings Screen
+**The minimum version of Android is 13 (SDK33)**.
+
 In the settings menu, you can change how the flashlight works to your liking. There is also a button with explanations of all settings items.
 ### Tile in QS
 - By clicking on a tile, it turns on the flashlight at the saved value.
