@@ -18,6 +18,9 @@ Flashlight brightness control only supports HAL version 3.8 and higher, so among
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
      alt="Get it on F-Droid"
      height="80">](https://f-droid.org/packages/com.pdb82.flashlighttiramisu/)
+[<img src="https://user-images.githubusercontent.com/65498838/204002002-bc8707d1-0b0a-483b-ad02-593cf98e8911.png"
+     alt="Get it on GitHub"
+     height="80">](https://github.com/polodarb/Flashlight-Tiramisu/releases/download/2.0/app-release.apk)
 # Thanks
 - [Nail Sadykov](https://t.me/nailsad_eleos) for testing the application during development
 # Support Me
