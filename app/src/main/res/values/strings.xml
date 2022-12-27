@@ -18,13 +18,14 @@
     <string name="add_title_in_device_control">Add title in Device Control</string>
     <string name="explanation_of_setting_items">Explanation of setting items</string>
 
-    <string name="title">Explanation of setting items</string>
     <string name="supporting_text">1. Slider turns on the flashlight - Auto turn on flashlight when slider value/position changes. \n2. Set slider to saved value - Set the slider position to the saved value after turning on the flashlight via button.\n3. Selecting segment button values between two options:\n    • 1 option is (1% | 25% | 50% | 100%)\n    • 2 option is (25% | 50% | 75% | 100%)</string>
     <string name="accept">OK</string>
     <string name="decline">Copy text</string>
     <string name="copied_to_clipboard">Text copied to clipboard</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="device_not_support">Device not support</string>
     <string name="exit_the_application">Exit the application</string>
+
+    <string name="tile_title">Flashlight</string>
+    <string name="tile_subtitle_saved_brightness" formatted="false">Saved: %d%%</string>
+    <string name="tile_subtitle_application_launched">Application launched</string>
 </resources>

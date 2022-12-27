@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Flashlight Tiramisu</string>
+    <string name="add_qs_title">QS Titel hinzufügen</string>
+    <string name="settings">Einstellungen</string>
+    <string name="add_flashlight_title_in_device_control">Taschelampe Titel in Device Control hinzufügen</string>
+
+    <string name="default_value_text" formatted="false">Gespeicherter Wert: %d%%</string>
+    <string name="save_as_default_value">Speichere Wert als Standard</string>
+
+    <string name="github">Mein GitHub Profil</string>
+    <string name="label_main">Kontrolle</string>
+    <string name="slider_turns_on_the_flashlight">Slider aktiviert die Taschenlampe</string>
+    <string name="auto_set_slider_from_default_value">Setze Slider zu gespeichertem Wert</string>
+    <string name="settings_segment_values">Werte auf Segment Buttons</string>
+    <string name="option_1">1 Option - (1% | 25% | 50% | 100%)</string>
+    <string name="option_2">2 Option - (25% | 50% | 75% | 100%)</string>
+    <string name="label_experimental">Experimentell</string>
+    <string name="add_title_in_device_control">Titel in Device Control hinzufügen</string>
+    <string name="explanation_of_setting_items">Erklärung der Einstellungen</string>
+
+    <string name="supporting_text">1. Slider aktiviert die Taschenlampe - Aktiviert Taschenlampe automatisch, wenn sich Wert/Position ändert.\n2. Setze Slider zu gespeichertem Wert - Setze Slider zu gespeichertem Wert nachdem Taschenlampe über Button aktiviert wurde.\n3. Segment Buttons können aus zwei Optionen gewählt werden:\n    • 1 Option ist (1% | 25% | 50% | 100%)\n    • 2 Option ist (25% | 50% | 75% | 100%)</string>
+    <string name="accept">OK</string>
+    <string name="decline">Text kopieren</string>
+    <string name="copied_to_clipboard">Text in Zwischenablage kopiert</string>
+    <string name="device_not_support">Gerät nicht unterstützt</string>
+    <string name="exit_the_application">Schließe die Anwendung</string>
+
+    <string name="tile_title">Taschenlampe</string>
+    <string name="tile_subtitle_saved_brightness" formatted="false">Wert: %d%%</string>
+    <string name="tile_subtitle_application_launched">Anwendung gestartet</string>
+</resources>
