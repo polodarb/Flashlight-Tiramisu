@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 import android.hardware.camera2.CameraManager
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
+import com.pdb82.flashlighttiramisu.R
 import com.pdb82.flashlighttiramisu.ui.fragments.APP_PREFERENCES
 import com.pdb82.flashlighttiramisu.ui.fragments.MainFragment
 import com.pdb82.flashlighttiramisu.ui.fragments.SLIDER_SAVED_VALUE
@@ -53,21 +54,24 @@ class MyTileService : TileService() {
             torchCallback = object : CameraManager.TorchCallback() {
                 override fun onTorchModeChanged(cameraId: String, enabled: Boolean) {
                     super.onTorchModeChanged(cameraId, enabled)
-                    subtitle = "Saved: ${preferences.getFloat(SLIDER_SAVED_VALUE, 25F).toInt()}%"
+                    subtitle = resources.getString(
+                        R.string.tile_subtitle_saved_brightness,
+                        preferences.getFloat(SLIDER_SAVED_VALUE, 25F).toInt()
+                    )
                     if (!MainFragment.active) {
                         if (enabled) qsTile.state =
                             Tile.STATE_ACTIVE else qsTile.state =
                             Tile.STATE_INACTIVE
                     } else {
                         state = Tile.STATE_UNAVAILABLE
-                        subtitle = "Application launched"
+                        subtitle = resources.getString(R.string.tile_subtitle_application_launched)
                     }
                 }
             }
             cameraManager.registerTorchCallback(torchCallback, null)
         } else {
             state = Tile.STATE_UNAVAILABLE
-            subtitle = "Device not support"
+            subtitle = resources.getString(R.string.device_not_support)
         }
         updateTile()
     } ?: Unit

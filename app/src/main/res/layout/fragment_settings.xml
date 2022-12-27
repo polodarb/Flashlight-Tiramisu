@@ -23,7 +23,7 @@
             app:layout_collapseMode="pin"
             app:menu="@menu/settings_top_app_bar"
             app:navigationIcon="@drawable/back_24"
-            app:title="Settings" />
+            app:title="@string/settings" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -147,6 +147,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

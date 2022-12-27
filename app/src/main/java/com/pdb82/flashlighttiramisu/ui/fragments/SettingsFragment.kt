@@ -58,7 +58,7 @@ class SettingsFragment : Fragment() {
 
         binding.explanationOfSettings.setOnClickListener {
             MaterialAlertDialogBuilder(requireContext())
-                .setTitle(resources.getString(R.string.title))
+                .setTitle(resources.getString(R.string.explanation_of_setting_items))
                 .setMessage(resources.getString(R.string.supporting_text))
                 .setPositiveButton(resources.getString(R.string.accept)) { _, _ ->
 
