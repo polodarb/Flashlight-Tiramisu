@@ -2,7 +2,6 @@
     <string name="app_name">Flashlight Tiramisu</string>
     <string name="add_qs_title">Add QS Title</string>
     <string name="settings">Settings</string>
-    <string name="add_flashlight_title_in_device_control">Add flashlight title in Device Control</string>
 
     <string name="default_value_text" formatted="false">Saved value: %d%%</string>
     <string name="save_as_default_value">Save slider value as default</string>

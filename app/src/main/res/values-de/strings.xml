@@ -2,7 +2,6 @@
     <string name="app_name">Flashlight Tiramisu</string>
     <string name="add_qs_title">QS Titel hinzufügen</string>
     <string name="settings">Einstellungen</string>
-    <string name="add_flashlight_title_in_device_control">Taschelampe Titel in Device Control hinzufügen</string>
 
     <string name="default_value_text" formatted="false">Gespeicherter Wert: %d%%</string>
     <string name="save_as_default_value">Speichere Wert als Standard</string>
