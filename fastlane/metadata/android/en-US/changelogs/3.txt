@@ -1,0 +1,11 @@
+New:
+Added the ability to automatically activate the flashlight when the application starts.
+Redesigned settings for segment buttons (Instead of a popup menu, a dialog is implemented).
+The transition animation to the settings screen has been reworked to fit the material design guidelines.
+Added German localization
+Fix:
+Fixed error when trying to click on a tile in QS on an unsupported device.
+Fixed issue with missing screen exit animation for unsupported devices.
+Fixed card layout with saved value.
+Other:
+Removed experimental item from settings.
