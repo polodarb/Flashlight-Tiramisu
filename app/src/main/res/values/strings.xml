@@ -15,16 +15,16 @@
     <string name="option_2">25% | 50% | 75% | 100%</string>
     <string name="explanation_of_setting_items">Explanation of setting items</string>
 
-    <string name="supporting_text">1. Slider turns on the flashlight - Auto turn on flashlight when slider value/position changes. \n2. Set slider to saved value - Set the slider position to the saved value after turning on the flashlight via button.\n3. Auto turn on flashlight when app starts - The flashlight will automatically turn on when you launch this application.\n4. Selecting segment button values between two options:\n    • 1 option is (1% | 25% | 50% | 100%)\n    • 2 option is (25% | 50% | 75% | 100%)</string>
+    <string name="supporting_text">1. Slider turns on the flashlight - Auto turn on flashlight when slider value/position changes. \n2. Set slider to saved value - Set the slider position to the saved value after turning on the flashlight via button.\n3. Turn on flashlight when app starts - The flashlight will automatically turn on when you launch this application.\n4. Selecting segment button values between two options:\n    • 1 option is (1% | 25% | 50% | 100%)\n    • 2 option is (25% | 50% | 75% | 100%)</string>
     <string name="dialog_options">Value variations on Segment Buttons</string>
     <string name="accept">OK</string>
     <string name="decline">Copy text</string>
     <string name="copied_to_clipboard">Text copied to clipboard</string>
-    <string name="device_not_support">Device not support</string>
+    <string name="device_not_support">Device not supported</string>
     <string name="exit_the_application">Exit the application</string>
 
     <string name="tile_title">Flashlight</string>
     <string name="tile_subtitle_saved_brightness" formatted="false">Saved: %d%%</string>
     <string name="tile_subtitle_application_launched">Application launched</string>
-    <string name="auto_turn_on_flashlight_when_app_starts">Auto turn on flashlight when app starts</string>
+    <string name="auto_turn_on_flashlight_when_app_starts">Turn on flashlight when app starts</string>
 </resources>
