@@ -13,7 +13,6 @@ import android.view.HapticFeedbackConstants
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -32,7 +31,8 @@ const val TORCH_MAX_LEVEL = "TORCH_MAX_VALUE"
 class MainFragment : Fragment() {
 
     companion object {
-        var active: Boolean = false
+        var firstStart = false
+        var active = false
         var settingsState = false
         var savedInstance = false
     }
@@ -95,6 +95,12 @@ class MainFragment : Fragment() {
             controlTopBar()
             formatSliderValue(torchMaxLevel.toFloat())
 
+            if (preferences.getBoolean(AUTO_TURN_ON_WHEN_APP_STARTS, false) && firstStart) {
+                changeFromSegment = true
+                binding.button.isChecked = true
+                val value = binding.slider.value
+                flashlightControlFromSlider(value, outCameraId)
+            }
 
             binding.slider.addOnSliderTouchListener(object : Slider.OnSliderTouchListener {
                 override fun onStartTrackingTouch(slider: Slider) {
@@ -148,8 +154,7 @@ class MainFragment : Fragment() {
 
                 binding.saveValue.setOnClickListener {
                     preferences.edit().putFloat(SLIDER_SAVED_VALUE, valuePercent.toFloat()).apply()
-                    preferences =
-                        appContext.getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE)
+                    preferences = appContext.getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE)
                     animateScaleTextView()
                 }
             }
@@ -361,13 +366,7 @@ class MainFragment : Fragment() {
                         "Flashlight",
                         Icon.createWithResource(context, R.drawable.baseline_highlight_24),
                         {},
-                        {
-                            Toast.makeText(
-                                context,
-                                "ERROR ADD",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        }
+                        {}
                     )
                     true
                 }
@@ -378,6 +377,7 @@ class MainFragment : Fragment() {
                     binding.segmentButton.clearChecked()
                     true
                 }
+
                 else -> false
             }
         }
@@ -388,9 +388,10 @@ class MainFragment : Fragment() {
         active = true
     }
 
-    override fun onResume() {
+        override fun onResume() {
         super.onResume()
         active = true
+        firstStart = false
         val list = cameraManager.cameraIdList
         val outCameraId = list[0]
         if ((preferences.getFloat(TORCH_MAX_LEVEL, 0F) > 1)) {
@@ -426,6 +427,7 @@ class MainFragment : Fragment() {
     override fun onStop() {
         super.onStop()
         active = false
+        firstStart = false
         cameraManager.unregisterTorchCallback(torchCallback)
     }
 

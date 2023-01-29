@@ -10,10 +10,8 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.HapticFeedbackConstants
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -24,12 +22,17 @@ import com.pdb82.flashlighttiramisu.databinding.FragmentSettingsBinding
 const val APP_PREFERENCES = "APP_PREFERENCES"
 const val SLIDER_AUTO_FLASH = "SLIDER_AUTO_FLASH"
 const val SLIDER_FROM_DEFAULT = "SLIDER_FROM_DEFAULT"
+const val AUTO_TURN_ON_WHEN_APP_STARTS = "AUTO_TURN_ON_WHEN_APP_STARTS"
 const val OPTIONS = "OPTIONS"
 
 class SettingsFragment : Fragment() {
 
     private lateinit var binding: FragmentSettingsBinding
     private lateinit var preferences: SharedPreferences
+
+    companion object {
+        var setSingleChoiceItems = 0
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -38,8 +41,8 @@ class SettingsFragment : Fragment() {
     ): View {
         binding = FragmentSettingsBinding.inflate(inflater, container, false)
 
-//        MainFragment.torchEnabled = false
         MainFragment.settingsState = true
+        MainFragment.firstStart = false
 
         val appContext = requireContext().applicationContext
         preferences = appContext.getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE)
@@ -49,6 +52,9 @@ class SettingsFragment : Fragment() {
 
         binding.settingsAutoSliderFromDefaultValue.isChecked =
             preferences.getBoolean(SLIDER_FROM_DEFAULT, true)
+
+        binding.settingsAutoTurnOnOpenApp.isChecked =
+            preferences.getBoolean(AUTO_TURN_ON_WHEN_APP_STARTS, false)
 
         binding.settingsSwitchSegmentButtonDescription.text =
             preferences.getString(OPTIONS, resources.getString(R.string.option_1))
@@ -88,8 +94,19 @@ class SettingsFragment : Fragment() {
             settingsCheckboxSliderFromDefaultValue(isChecked)
         }
 
-        binding.linearSegment.setOnClickListener { v: View ->
-            createPopUp(v)
+        binding.settingsAutoTurnOnOpenApp.setOnCheckedChangeListener { _, isChecked ->
+            settingsCheckboxAutoTurnOnWhenAppStarts(isChecked)
+        }
+
+
+        if (preferences.getString(OPTIONS, resources.getString(R.string.option_1)) == resources.getString(R.string.option_1)) {
+            setSingleChoiceItems = 0
+        } else {
+            setSingleChoiceItems = 1
+        }
+
+        binding.linearSegment.setOnClickListener {
+            createOptionsDialog()
         }
 
 
@@ -128,34 +145,48 @@ class SettingsFragment : Fragment() {
         }
     }
 
-    private fun createPopUp(v: View) {
+    private fun settingsCheckboxAutoTurnOnWhenAppStarts(isChecked: Boolean) {
         binding.linearSegment.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_RELEASE)
-        val popup = PopupMenu(activity, v)
-        popup.menuInflater.inflate(R.menu.popup_menu, popup.menu)
-        popup.setOnMenuItemClickListener { menuItem: MenuItem ->
-            when (menuItem.itemId) {
-                R.id.option_1 -> {
-                    binding.settingsSwitchSegmentButtonDescription.text =
-                        getString(R.string.option_1)
-                    preferences.edit().putString(OPTIONS, resources.getString(R.string.option_1))
-                        .apply()
-
-                }
-
-                R.id.option_2 -> {
-                    binding.settingsSwitchSegmentButtonDescription.text =
-                        getString(R.string.option_2)
-                    preferences.edit().putString(OPTIONS, resources.getString(R.string.option_2))
-                        .apply()
-
-                }
-
-                else -> Toast.makeText(requireContext(), "Menu selection error", Toast.LENGTH_SHORT)
-                    .show()
-            }
-            true
+        if (isChecked) {
+            preferences.edit().putBoolean(AUTO_TURN_ON_WHEN_APP_STARTS, true).apply()
+        } else {
+            preferences.edit().putBoolean(AUTO_TURN_ON_WHEN_APP_STARTS, false).apply()
         }
-        popup.show()
+    }
+
+    private fun createOptionsDialog() {
+
+        val items = arrayOf(getString(R.string.option_1), getString(R.string.option_2))
+
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle(resources.getString(R.string.dialog_options))
+            .setIcon(R.drawable.info_24)
+            .setSingleChoiceItems(items, setSingleChoiceItems) { dialog, which ->
+                when (which) {
+                    0 -> {
+                        binding.settingsSwitchSegmentButtonDescription.text =
+                            getString(R.string.option_1)
+                        preferences.edit()
+                            .putString(OPTIONS, resources.getString(R.string.option_1))
+                            .apply()
+                        setSingleChoiceItems = 0
+                    }
+
+                    1 -> {
+                        binding.settingsSwitchSegmentButtonDescription.text =
+                            getString(R.string.option_2)
+                        preferences.edit()
+                            .putString(OPTIONS, resources.getString(R.string.option_2))
+                            .apply()
+                        setSingleChoiceItems = 1
+                    }
+                }
+                dialog.dismiss()
+            }
+            .setNeutralButton("Cancel") { dialog, which ->
+                dialog.cancel()
+            }
+            .show()
     }
 
     private fun backButton() {

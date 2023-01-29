@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
 import com.pdb82.flashlighttiramisu.databinding.ActivityMainBinding
+import com.pdb82.flashlighttiramisu.ui.fragments.MainFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +16,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        MainFragment.firstStart = true
 
         supportFragmentManager.findFragmentById(binding.fragmentContainerView.id) as NavHostFragment
     }

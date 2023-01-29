@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate
+        android:duration="@integer/material_motion_duration_long_1"
+        android:startOffset="100"
+        android:fromXDelta="-10%" />
+    <alpha
+        android:duration="@integer/material_motion_duration_short_2"
+        android:startOffset="200"
+        android:fromAlpha="0"
+        android:toAlpha="1" />
+</set>

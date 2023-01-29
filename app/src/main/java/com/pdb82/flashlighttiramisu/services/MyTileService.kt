@@ -23,7 +23,9 @@ class MyTileService : TileService() {
 
     override fun onStopListening() {
         super.onStopListening()
-        cameraManager.unregisterTorchCallback(torchCallback)
+        if (preferences.getFloat(TORCH_MAX_LEVEL, 0F) > 1) {
+            cameraManager.unregisterTorchCallback(torchCallback)
+        }
     }
 
     override fun onClick() {

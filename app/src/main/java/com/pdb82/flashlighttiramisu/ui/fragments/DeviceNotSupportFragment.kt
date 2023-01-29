@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.pdb82.flashlighttiramisu.databinding.FragmentDeviceNotSupportBinding
-import kotlin.system.exitProcess
 
 class DeviceNotSupportFragment : Fragment() {
 
@@ -15,11 +14,11 @@ class DeviceNotSupportFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentDeviceNotSupportBinding.inflate(inflater, container, false)
 
         binding.button2.setOnClickListener {
-            exitProcess(0)
+            activity?.finish()
         }
 
         return binding.root

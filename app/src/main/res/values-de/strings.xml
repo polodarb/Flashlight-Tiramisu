@@ -11,13 +11,11 @@
     <string name="slider_turns_on_the_flashlight">Slider aktiviert die Taschenlampe</string>
     <string name="auto_set_slider_from_default_value">Setze Slider auf gespeicherten Wert</string>
     <string name="settings_segment_values">Werte auf Segment Buttons</string>
-    <string name="option_1">1 Option - (1% | 25% | 50% | 100%)</string>
-    <string name="option_2">2 Option - (25% | 50% | 75% | 100%)</string>
-    <string name="label_experimental">Experimentell</string>
-    <string name="add_title_in_device_control">Titel in Device Control hinzufügen</string>
+    <string name="option_1">1% | 25% | 50% | 100%</string>
+    <string name="option_2">25% | 50% | 75% | 100%</string>
     <string name="explanation_of_setting_items">Erklärung der Einstellungen</string>
 
-    <string name="supporting_text">1. Slider aktiviert die Taschenlampe - Aktiviert Taschenlampe automatisch, wenn sich Wert/Position ändert.\n2. Setze Slider auf gespeicherten Wert - Setze Slider auf gespeicherten Wert nachdem Taschenlampe über Button aktiviert wurde.\n3. Segment Buttons können aus zwei Optionen gewählt werden:\n    • 1 Option ist (1% | 25% | 50% | 100%)\n    • 2 Option ist (25% | 50% | 75% | 100%)</string>
+    <string name="supporting_text">1. Slider aktiviert die Taschenlampe - Aktiviert Taschenlampe automatisch, wenn sich Wert/Position ändert.\n2. Setze Slider auf gespeicherten Wert - Setze Slider auf gespeicherten Wert nachdem Taschenlampe über Button aktiviert wurde.\n3. Taschenlampe beim Start der App automatisch einschalten – Die Taschenlampe wird automatisch eingeschaltet, wenn Sie diese Anwendung starten.\n4. Segment Buttons können aus zwei Optionen gewählt werden:\n    • 1 Option ist (1% | 25% | 50% | 100%)\n    • 2 Option ist (25% | 50% | 75% | 100%)</string>
     <string name="accept">OK</string>
     <string name="decline">Text kopieren</string>
     <string name="copied_to_clipboard">Text in Zwischenablage kopiert</string>
@@ -27,4 +25,6 @@
     <string name="tile_title">Taschenlampe</string>
     <string name="tile_subtitle_saved_brightness" formatted="false">Wert: %d%%</string>
     <string name="tile_subtitle_application_launched">Anwendung gestartet</string>
+    <string name="auto_turn_on_flashlight_when_app_starts">Taschenlampe automatisch einschalten, wenn App startet</string>
+    <string name="dialog_options">Wertvariationen auf Segmenttasten</string>
 </resources>

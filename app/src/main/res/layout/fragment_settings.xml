@@ -66,6 +66,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/settings_switch_auto_flashlight" />
 
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/settings_auto_turn_on_open_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="20dp"
+        android:text="@string/auto_turn_on_flashlight_when_app_starts"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settings_auto_slider_from_default_value" />
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/linear_segment"
         android:layout_width="match_parent"
@@ -76,7 +89,7 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/settings_auto_slider_from_default_value">
+        app:layout_constraintTop_toBottomOf="@id/settings_auto_turn_on_open_app">
 
         <TextView
             android:id="@+id/settings_switch_segment_button"
@@ -105,37 +118,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/settings_switch_segment_button" />
     </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-    <TextView
-        android:id="@+id/label_experimental"
-        style="@style/TextAppearance.Material3.LabelLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="24dp"
-        android:paddingTop="28dp"
-        android:text="@string/label_experimental"
-        android:textColor="?attr/colorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linear_segment" />
-
-    <TextView
-        android:id="@+id/settings_device_control"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:enabled="false"
-        android:focusable="true"
-        android:foreground="?attr/selectableItemBackground"
-        android:paddingHorizontal="24dp"
-        android:paddingVertical="20dp"
-        android:text="@string/add_title_in_device_control"
-        android:textColor="?android:attr/textColorPrimaryDisableOnly"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/label_experimental" />
 
     <Button
         android:id="@+id/explanation_of_settings"
