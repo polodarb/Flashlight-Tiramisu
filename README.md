@@ -23,7 +23,4 @@ Flashlight brightness control only supports HAL version 3.8 and higher, so among
      height="80">](https://github.com/polodarb/Flashlight-Tiramisu/releases/download/2.1/app-release.apk)
 # Thanks
 - [Nail Sadykov](https://t.me/nailsad_eleos) for testing the application during development
-# Support Me
-[<img src="https://user-images.githubusercontent.com/65498838/203966455-3c3329b9-46bf-47fa-bd90-7e7c339369a8.png"
-     alt="Support Me"
-     height="60">](https://www.paypal.com/donate/?hosted_button_id=KMHJ6EJQPD9RN)
+
